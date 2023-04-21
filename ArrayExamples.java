@@ -36,9 +36,11 @@ public class ArrayExamples {
       }
     }
     double sum = 0;
+    int count = 0;
     for (double num : arr) {
-      if (num != lowest) {
+      if (num != lowest && count == 0) {
         sum += num;
+        count++;
       }
     }
     return sum / (arr.length - 1);
